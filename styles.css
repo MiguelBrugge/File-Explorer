@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+:root {
+    --primary-color: rgba(61, 59, 82, 0.28);
+    --primary-dark-color: rgba(0, 0, 0, 0.28);
+    --secondary-color: #3F3D50;
+    --secondary-light-color: rgba(255, 255, 255, 0.28);
+}
+
+html {
+    background-image: url('./media/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+
+    color: white;
+    font-family: 'Yusei Magic', sans-serif;
+    transition: all 1s linear;
+}
+
+#window {
+    width: 80vw;
+    height: 80vh;
+    background-color: var(--primary-color);
+    backdrop-filter: blur(13px);
+
+    border-radius: 30px;
+    border: 5px solid var(--secondary-color);
+
+    margin-inline: auto;
+    margin-top: 50px;
+    padding: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--primary-dark-color); 
+    border-radius: 100px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color); 
+    border-radius: 100px;
+  }
+
+
+.clickable:hover,
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    scale: 1.05;
+    border-color: none !important;
+    outline: white solid 2px !important;
+}
+
+.selected{
+    outline: white solid 2px !important;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: center;
+}
+
+h2 {
+    margin: 0;
+    text-wrap: nowrap;
+}
+
+#breadcrumbs {
+    flex: 1;
+    display: flex;
+    gap: .6em;
+    background-color: var(--primary-dark-color);
+    padding: .7em;
+    height: 30px;
+    border-radius: 10px;
+    border: solid 3px var(--secondary-color);
+}
+
+#breadcrumbs .active {
+    outline: solid 3px var(--secondary-color);
+    background-color: var(--primary-dark-color);
+}
+
+#breadcrumbs button {
+    color: white;
+    display: flex;
+    gap: 0.4em;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    border: none;
+    width: max-content;
+}
+
+#searchbar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-dark-color);
+    border-radius: 10px;
+    border: solid 3px var(--secondary-color);
+    color: var(--secondary-color) !important;
+    font-size: larger;
+    padding-left: .7em;
+}
+
+#searchbar input {
+    height: 30px;
+    padding: .7em;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    flex: 1;
+}
+
+#actions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: .4em;
+    width: min-content;
+}
+
+#actions div {
+    display: flex;
+    gap: .4em;
+}
+
+#actions div button {
+    height: 26px;
+    width: 26px;
+    border-radius: 5px;
+    font-size: 13px;
+    border: none;
+    color: white;
+    outline: solid 2px var(--secondary-light-color);
+    background-color: var(--primary-dark-color);
+}
+
+#actions div .system-action {
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+}
+
+#window-body {
+    max-height: 95%;
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar */
+#sidebar {
+    margin-top: .6em;
+    width: 15%;
+    border: solid 3px var(--secondary-color);
+    border-left: none;
+    border-bottom: none;
+    border-top-right-radius: 10px;
+    padding: .5em;
+}
+
+#sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-inline: .5em;
+}
+
+#sidebar li {
+    list-style: none;
+    display: flex;
+    gap: .6em;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: .6em;
+    padding-inline: 1em;
+    border-radius: 5px;
+}
+
+#sidebar .active {
+    outline: solid 3px var(--secondary-color);
+    background-color: var(--primary-dark-color);
+}
+
+/* Content */
+#content {
+    height: min-content;
+    max-height: 90%;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+#content div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid var(--secondary-color);
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+#content div p {
+    margin: 0;
+}
+
+#content div i {
+    font-size: 60px;
+}

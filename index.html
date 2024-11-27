@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d3dd41d254.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>File Explorer</title>
+</head>
+
+<body>
+    <main>
+        <section id="window">
+            <!-- Header -->
+            <header>
+                <h2>File Explorer</h2>
+                <section id="breadcrumbs">
+                    <!-- Generated in TS -->
+                </section>
+                <section id="searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="searchbar-input" type="text" placeholder="Search">
+                </section>
+                <section id="actions">
+                    <div>
+                        <button class="system-action"><i class="fa-solid fa-file-circle-plus"></i></button>
+                        <button class="system-action"><i class="fa-solid fa-minus"></i></button>
+                        <button class="system-action"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div>
+                        <button id="new-folder-button"><i class="fa-solid fa-folder-plus"></i></button>
+                        <button id="rename"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button id="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </section>
+            </header>
+            <section id="window-body">
+                <!-- Sidebar -->
+                <aside id="sidebar">
+                    <nav>
+                        <ul>
+                            <li class="active clickable"><i class="fa-solid fa-folder-closed"></i>Documents</li>
+                            <li class="clickable"><i class="fa-solid fa-download"></i></i>Downloads</li>
+                            <li class="clickable"><i class="fa-brands fa-google-drive"></i></i>Google Drive</li>
+                            <li class="clickable"><i class="fa-solid fa-image"></i></i>Pictures</li>
+                            <li class="clickable"><i class="fa-solid fa-music"></i></i>Music</li>
+                            <li class="clickable"><i class="fa-solid fa-video"></i>Video</li>
+                        </ul>
+                    </nav>
+                </aside>
+                <!-- Content -->
+                <section id="content">
+                    <div onclick="openFolder()" class="clickable">
+                        <i class="fa-solid fa-folder-closed"></i>
+                        <p>Map</p>
+                    </div>
+                </section>
+            </section>
+
+        </section>
+    </main>
+    <script type="module" src="./dest/app.js"></script>
+</body>
+</html>
