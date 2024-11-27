@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "tsc --watch",
+    "build": "tsc",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "keywords": [],
